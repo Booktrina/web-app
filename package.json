@@ -6,7 +6,7 @@
   "repository": "https://github.com/booktrina/web-app",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "start": "lerna bootstrap; lerna run start --stream"
   },
@@ -14,7 +14,12 @@
     "src/apps/*",
     "src/packages/*"
   ],
+  "babel-loader-lerna-cra": {
+    "imports": "src/packages/ui-kit/src",
+    "apps": "src/apps/core"
+  },
   "devDependencies": {
+    "babel-loader-lerna-cra": "*",
     "lerna": "^5.1.8"
   }
 }
