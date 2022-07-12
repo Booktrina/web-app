@@ -1,6 +1,5 @@
 #FOLDERS AND WORKING FILES
 /node_modules
-.idea
 /build
 /.pnp
 .pnp.js
@@ -21,3 +20,6 @@ package-lock.json
 yarn-debug.log*
 yarn-error.log*
 yarn.lock
+
+# ide
+.idea

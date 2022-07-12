@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Button} from '@web-app/ui';
+import React, { FC } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Title } from "@web-app/ui";
 
-function App() {
+export const App: FC<any> = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,10 +20,8 @@ function App() {
           Learn React
         </a>
 
-        <Button text="some text"/>
+        <Title text="Some Title!" />
       </header>
     </div>
   );
-}
-
-export default App;
+};
