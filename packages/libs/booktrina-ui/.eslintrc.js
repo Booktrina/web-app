@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'react-app',
-    'prettier'
-    // "plugin:react/recommended",
-  ],
+  extends: ['react-app', 'prettier', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -12,31 +8,14 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'import',
-    'prettier',
-    'unicorn',
-    'react',
-    'react-extra',
-    'sort-exports'
-  ],
-  ignorePatterns: [
-    '**/node_modules',
-    '**/public',
-    'src/frontend/config/env.js',
-    '**/build',
-    '*.d.ts'
-  ],
-  overrides: [
-    {
-      files: [
-        '**/*.stories.*'
-      ],
-      rules: {
-        'import/no-anonymous-default-export': 'off'
-      }
+  plugins: ['import', 'prettier', 'unicorn', 'react', 'react-extra', 'sort-exports'],
+  ignorePatterns: ['**/node_modules', '**/public', 'src/frontend/config/env.js', '**/build', '*.d.ts'],
+  overrides: [{
+    files: ['**/*.stories.*'],
+    rules: {
+      'import/no-anonymous-default-export': 'off'
     }
-  ],
+  }],
   rules: {
     'react/jsx-boolean-value': 2,
     'react/jsx-key': 2,
@@ -44,51 +23,29 @@ module.exports = {
     'react-extra/no-inline-styles': 1,
     // 'arrow-parens': [2, 'always'],
     'block-scoped-var': 2,
-    'brace-style': [
-      2,
-      '1tbs'
-    ],
+    'brace-style': [2, '1tbs'],
     // 'camelcase': [2, { properties: 'never' }],
-    'curly': [
-      2,
-      'all'
-    ],
-    'dot-location': [
-      1,
-      'property'
-    ],
+    'curly': [2, 'all'],
+    'dot-location': [1, 'property'],
     'dot-notation': 2,
     'eol-last': 2,
     'eqeqeq': 2,
     'no-alert': 2,
-    'no-console': [
-      'warn',
-      {
-        allow: [
-          'error'
-        ]
-      }
-    ],
+    'no-console': ['warn', {
+      allow: ['error']
+    }],
     'no-else-return': 2,
-    'no-empty': [
-      2,
-      {
-        allowEmptyCatch: true
-      }
-    ],
+    'no-empty': [2, {
+      allowEmptyCatch: true
+    }],
     'no-eq-null': 2,
     'no-eval': 2,
     'no-extra-semi': 2,
     'no-extend-native': 2,
     'no-fallthrough': 2,
-    'no-implicit-coercion': [
-      2,
-      {
-        allow: [
-          '!!'
-        ]
-      }
-    ],
+    'no-implicit-coercion': [2, {
+      allow: ['!!']
+    }],
     'no-implied-eval': 2,
     'no-lone-blocks': 2,
     'no-loop-func': 2,
@@ -108,94 +65,64 @@ module.exports = {
     'no-throw-literal': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
-    'no-unused-expressions': [
-      'warn',
-      {
-        allowShortCircuit: true,
-        allowTernary: true
-      }
-    ],
+    'no-unused-expressions': ['warn', {
+      allowShortCircuit: true,
+      allowTernary: true
+    }],
     // note you must disable the base rule as it can report incorrect errors
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      {
-        argsIgnorePattern: '^_',
-        caughtErrors: 'none'
-      }
-    ],
+    '@typescript-eslint/no-unused-vars': ['warn', {
+      argsIgnorePattern: '^_',
+      caughtErrors: 'none'
+    }],
     'no-useless-call': 2,
     'no-useless-concat': 2,
     'no-useless-escape': 2,
     'no-void': 2,
     'no-var': 2,
-    'one-var': [
-      2,
-      'never'
-    ],
-    'padding-line-between-statements': [
-      'error',
-      {
-        blankLine: 'always',
-        prev: 'multiline-const',
-        next: '*'
-      },
-      {
-        blankLine: 'always',
-        prev: 'multiline-let',
-        next: '*'
-      },
-      {
-        blankLine: 'always',
-        prev: '*',
-        next: 'block-like'
-      },
-      {
-        blankLine: 'always',
-        prev: 'block-like',
-        next: '*'
-      },
-      {
-        blankLine: 'always',
-        prev: '*',
-        next: 'multiline-expression'
-      },
-      {
-        blankLine: 'always',
-        prev: 'multiline-expression',
-        next: '*'
-      },
-      {
-        blankLine: 'always',
-        prev: '*',
-        next: 'return'
-      }
-    ],
+    'one-var': [2, 'never'],
+    'padding-line-between-statements': ['error', {
+      blankLine: 'always',
+      prev: 'multiline-const',
+      next: '*'
+    }, {
+      blankLine: 'always',
+      prev: 'multiline-let',
+      next: '*'
+    }, {
+      blankLine: 'always',
+      prev: '*',
+      next: 'block-like'
+    }, {
+      blankLine: 'always',
+      prev: 'block-like',
+      next: '*'
+    }, {
+      blankLine: 'always',
+      prev: '*',
+      next: 'multiline-expression'
+    }, {
+      blankLine: 'always',
+      prev: 'multiline-expression',
+      next: '*'
+    }, {
+      blankLine: 'always',
+      prev: '*',
+      next: 'return'
+    }],
     'prefer-const': 2,
     'prefer-arrow-callback': 2,
     // 'quotes': [2, 'single', { avoidEscape: true }],
     'yoda': 2,
     // Plugin specific options:
     // 'babel/no-invalid-this': 2,
-
     // Does not recognize module.exports as default, so it's basically useless today
     'import/default': 0,
-    'import/order': [
-      2,
-      {
-        'groups': [
-          'builtin',
-          'external',
-          'unknown',
-          'internal',
-          'parent',
-          'sibling',
-          'index'
-        ],
-        'newlines-between': 'always-and-inside-groups'
-        // "alphabetize": { "order": "asc" }
-      }
-    ],
+    'import/order': [2, {
+      'groups': ['builtin', 'external', 'unknown', 'internal', 'parent', 'sibling', 'index'],
+      'newlines-between': 'always-and-inside-groups' // "alphabetize": { "order": "asc" }
+
+    }],
     'import/first': 2,
     // 'import/no-unresolved': 2,
     'import/no-unassigned-import': 0,
@@ -205,14 +132,10 @@ module.exports = {
     'import/no-named-as-default-member': 0,
     'import/no-named-as-default': 0,
     'import/no-cycle': 2,
-    'sort-imports': [
-      'error',
-      {
-        ignoreDeclarationSort: true
-      }
-    ],
+    'sort-imports': ['error', {
+      ignoreDeclarationSort: true
+    }],
     // "sort-exports/sort-exports": ["error", { "sortDir": "asc" }],
-
     'unicorn/no-for-loop': 2,
     'unicorn/no-abusive-eslint-disable': 2,
     'unicorn/no-array-instanceof': 2,
@@ -228,17 +151,7 @@ module.exports = {
     // 'key-spacing': 2,
     // 'keyword-spacing': 2,
     //'linebreak-style': [2, 'unix'],
-    'linebreak-style': [
-      2,
-      process.platform
-      ===
-      'win32'
-      ?
-      'windows'
-      :
-      'unix'
-    ]
-    // 'no-floating-decimal': 2,
+    'linebreak-style': [2, process.platform === 'win32' ? 'windows' : 'unix'] // 'no-floating-decimal': 2,
     // 'no-multi-spaces': 2,
     // 'space-in-parens': [2, 'never'],
     // 'comma-dangle': [
@@ -251,5 +164,6 @@ module.exports = {
     //         functions: 'ignore',
     //     },
     // ],
+
   }
 };

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import type { TitleProps } from './typings';
 import './styles.module.css';
 
