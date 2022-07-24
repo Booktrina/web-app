@@ -4,6 +4,7 @@
 /.pnp
 .pnp.js
 /coverage
+node_modules
 
 #ENV FILES
 .DS_Store
